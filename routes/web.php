@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', [DashboardController::class, 'index']);
+
+Route::get('/terms', function() {
+    return view('terms');
+});
